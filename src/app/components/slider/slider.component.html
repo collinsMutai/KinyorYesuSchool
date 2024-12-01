@@ -1,0 +1,35 @@
+<div class="custom-carousel">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      *ngFor="let image of images; let i = index"
+      [class.active]="i === currentIndex"
+    >
+      <img [src]="image.src" [alt]="image.alt" />
+
+      <div class="carousel-caption">
+        <p class="carousel-subtitle">{{ image.subtitle }}</p>
+        <h3 class="carousel-title">{{ image.title }}</h3>
+        <div class="button-container">
+          <button
+            class="carousel-btn about-btn"
+            (click)="onButtonClick('action1', i)"
+          >
+            About Us
+          </button>
+          <button
+            class="carousel-btn contact-btn"
+            (click)="onButtonClick('action2', i)"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" (click)="moveSlide(-1)">
+    &#10094;
+  </button>
+  <button class="carousel-control-next" (click)="moveSlide(1)">&#10095;</button>
+</div>
