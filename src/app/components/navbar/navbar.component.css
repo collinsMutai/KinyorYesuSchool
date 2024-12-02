@@ -12,6 +12,17 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Default size of the navbar brand (logo) */
+.navbar-brand {
+  transition: transform 0.3s ease;  /* Smooth transition for resizing */
+  transform: scale(1);  /* Default scale */
+}
+
+/* Shrink logo when scrolling up */
+.navbar-brand.shrink {
+  transform: scale(0.8);  /* Reduce size to 80% */
+}
+
 .nav-link {
   font-size: 16px;
   font-weight: 500;
@@ -32,7 +43,8 @@
 
 @media (max-width: 768px) {
   .nav-container {
-    padding: 20px;
+    padding: 10px;
+    top: 95px;
   }
   .navbar-nav {
     text-align: center;
@@ -66,4 +78,13 @@
     background-color: #444;
     color: #72a02f;
   }
+}
+
+
+@media (max-width: 425px) {
+  .nav-container {
+    padding: 10px;
+    top: 190px;
+  }
+
 }

@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: top center; /* Ensures the image stays aligned to the top-center */
   position: relative;
 }
 
@@ -39,19 +39,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3); /* Overlay for better readability of text */
   z-index: 1;
 }
 
 .carousel-caption {
   position: absolute;
   top: 50%;
-  left: 200px;
-  transform: translateY(-50%);
+  left: 200px; /* Initially positioned with left margin */
+  transform: translateY(-50%); /* Vertical centering */
   color: white;
   padding: 20px;
-  text-align: left;
-  max-width: 80%;
+  text-align: left; /* Left-aligned text for larger screens */
+  max-width: 80%; /* Max-width to ensure it doesn’t stretch too wide */
   z-index: 2;
 }
 
@@ -71,10 +71,10 @@
   flex-direction: row;
   gap: 10px;
   margin: 40px 0;
-  justify-content: flex-start; /* Default to left alignment */
+  justify-content: flex-start; /* Align buttons to the left by default */
 }
 
-.about-btn {
+.carousel-btn {
   background-color: #72a02f;
   color: white;
   border: none;
@@ -89,7 +89,7 @@
   max-width: 100%;
 }
 
-.about-btn:hover {
+.carousel-btn:hover {
   color: #72a02f;
   background-color: #fff;
 }
@@ -137,43 +137,47 @@
   right: 20px;
 }
 
+/* Media Queries for Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
+  
+  /* Adjust the caption position for mobile */
   .carousel-caption {
+    top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Center both horizontally and vertically */
-    width: 100%; /* Make the caption full-width */
-    text-align: center; /* Center text */
-    padding: 10px; /* Adjust padding for mobile */
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    transform: translate(-50%, -50%); /* Ensure perfect centering */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Reduced padding for mobile */
+    width: 100%; /* Allow full width */
   }
 
+  /* Adjust the title font size on mobile */
   .carousel-title {
-    font-size: 54px; /* Adjust title size for mobile */
+    font-size: 54px; /* Slightly smaller font size */
   }
 
+  /* Adjust the subtitle font size on mobile */
   .carousel-subtitle {
-    font-size: 16px; /* Adjust subtitle size for mobile */
+    font-size: 16px; /* Smaller subtitle font */
   }
 
+  /* Position carousel controls closer to the sides */
   .carousel-control-prev {
-    left: 10px; /* Adjust position for mobile */
+    left: 10px; /* Move prev control closer */
   }
 
   .carousel-control-next {
-    right: 10px; /* Adjust position for mobile */
+    right: 10px; /* Move next control closer */
   }
 
-  /* Center the buttons on mobile */
+  /* Make button container full width and center them */
   .button-container {
     justify-content: center; /* Center the buttons */
-    width: 100%; /* Make button container full-width */
+    width: 100%; /* Make the button container full-width */
     margin: 20px 0; /* Adjust margins for mobile */
   }
 
+  /* Space between buttons on mobile */
   .carousel-btn {
-    margin: 0 5px; /* Add some space between the buttons */
+    margin: 0 5px; /* Add some margin between the buttons */
   }
 }
