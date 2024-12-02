@@ -1,0 +1,56 @@
+/* Main container styles */
+.main-container {
+  padding: 80px 100px;
+  margin-bottom: 200px;
+  background-color: #f8f9fa;
+}
+
+/* Title text styling */
+.title-text {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+/* Card styles */
+.card {
+  padding: 12px;
+  transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+  position: relative; /* Necessary for sliding effect */
+  background-color: #fff;
+  border: none; /* Remove border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the card */
+  border-radius: 8px; /* Optional: Round the corners for a softer look */
+}
+
+/* Card hover effect */
+.card:hover {
+  background-color: #72a02f; /* Change background color */
+  color: white; /* Change text color */
+  transform: translateY(-10px); /* Slide up effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover for a lifted effect */
+}
+
+/* Icon styling inside the card */
+.card svg {
+  height: 60px;
+  width: 60px;
+  color: #fff; /* Default icon color */
+  background-color: #72a02f; /* Default background color */
+  padding: 7px; /* Space inside the background around the icon */
+  border-radius: 50%; /* Makes the background circular */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* On hover, change the icon color to white and the background to green */
+.card:hover svg {
+  color: #72a02f; /* Change icon color to green on hover */
+  background-color: #fff; /* Change background color to white on hover */
+  height: 50px; /* Slightly decrease icon size */
+  width: 50px; /* Slightly decrease icon size */
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
+}
