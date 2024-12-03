@@ -1,56 +1,109 @@
-/* Main container styles */
 .main-container {
   padding: 80px 100px;
-  margin-bottom: 200px;
+
   background-color: #f8f9fa;
 }
 
-/* Title text styling */
 .title-text {
   text-align: center;
   padding-bottom: 60px;
 }
 
-/* Card styles */
+.title-text h2,
+.content h2 {
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.title-text h3,
+.content h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #72a02f;
+}
+
 .card {
   padding: 12px;
-  transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
-  position: relative; /* Necessary for sliding effect */
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
   background-color: #fff;
-  border: none; /* Remove border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the card */
-  border-radius: 8px; /* Optional: Round the corners for a softer look */
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-/* Card hover effect */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row .col-sm-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 20px;
+}
+
 .card:hover {
-  background-color: #72a02f; /* Change background color */
-  color: white; /* Change text color */
-  transform: translateY(-10px); /* Slide up effect */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover for a lifted effect */
+  background-color: #72a02f;
+  color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Icon styling inside the card */
 .card svg {
   height: 60px;
   width: 60px;
-  color: #fff; /* Default icon color */
-  background-color: #72a02f; /* Default background color */
-  padding: 7px; /* Space inside the background around the icon */
-  border-radius: 50%; /* Makes the background circular */
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  color: #fff;
+  background-color: #72a02f;
+  padding: 7px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
-/* On hover, change the icon color to white and the background to green */
 .card:hover svg {
-  color: #72a02f; /* Change icon color to green on hover */
-  background-color: #fff; /* Change background color to white on hover */
-  height: 50px; /* Slightly decrease icon size */
-  width: 50px; /* Slightly decrease icon size */
+  color: #72a02f;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
 }
 
+.container {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.left-side {
+  padding-right: 30px;
+}
+
+.right-side img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .main-container {
     padding: 20px;
+  }
+  .container {
+    padding: 30px; /* Reduce padding on smaller screens */
+  }
+
+  .left-side,
+  .right-side {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
