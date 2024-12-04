@@ -1,6 +1,5 @@
 .main-container {
   padding: 80px 100px;
-
   background-color: #f8f9fa;
 }
 
@@ -10,21 +9,23 @@
 }
 
 .title-text h2,
-.content h2 {
+.content h2,
+.application-container h2 {
   font-size: 39px;
   font-weight: 600;
   line-height: 1.1;
 }
 
 .title-text h3,
-.content h3 {
+.content h3,
+.application-container h3 {
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 600;
   color: #72a02f;
 }
 
-.card {
+.main-container .card {
   padding: 12px;
   margin-bottom: 30px;
   transition: all 0.3s ease-in-out;
@@ -45,19 +46,19 @@
   flex-direction: column;
 }
 
-.card-body {
+.main-container .row .card-body {
   flex-grow: 1;
   padding: 20px;
 }
 
-.card:hover {
+.main-container .row .card:hover {
   background-color: #72a02f;
   color: white;
   transform: translateY(-10px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card svg {
+.main-container .row .card svg {
   height: 60px;
   width: 60px;
   color: #fff;
@@ -67,14 +68,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover svg {
+.main-container .row .card:hover svg {
   color: #72a02f;
   background-color: #fff;
   height: 50px;
   width: 50px;
 }
 
-.container {
+.curriculum-container {
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
@@ -92,18 +93,89 @@
   border-radius: 10px;
 }
 
-/* Responsive design for smaller screens */
+.application-container {
+  padding: 60px 0px;
+}
+
+.application-container h2,
+.application-container h3 {
+  text-align: center;
+}
+
+.application-container .card {
+  padding: 12px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+}
+
+.application-icon {
+  height: 30px;
+  width: 30px;
+  color: #72a02f;
+  margin-bottom: 15px !important;
+}
+.documents {
+  padding: 40px 0px;
+}
+
+ul {
+  list-style: none;
+  padding-top: 20px;
+}
+
+ul li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ul li svg {
+  margin-right: 15px;
+  color: #72a02f;
+  height: 30px;
+  width: 30px;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   .main-container {
     padding: 20px;
   }
-  .container {
-    padding: 30px; /* Reduce padding on smaller screens */
+  .curriculum-container {
+    padding: 30px;
+  }
+
+  .application-container .card {
+    margin-bottom: 5px;
+    padding: 4px;
+  }
+
+  .main-container .row .card svg {
+    height: 25px;
+    height: 25px;
   }
 
   .left-side,
   .right-side {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .documents {
+    padding: 10px;
+  }
+
+  ul li svg {
+    height: 25px;
+    width: 25px;
   }
 }
