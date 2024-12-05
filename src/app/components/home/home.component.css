@@ -1,9 +1,15 @@
+.main-container {
+  padding: 80px 100px;
+  background-color: #f8f9fa;
+}
+
 .about-content {
+  border-radius: 8px;
   display: flex;
   min-height: 400px;
   height: 100%;
-  padding: 20px 100px;
   margin: 20px 0px;
+  overflow: hidden;
 }
 
 .image {
@@ -93,7 +99,7 @@
 }
 
 @media (max-width: 768px) {
-  .about-content {
+  .main-container {
     padding: 20px;
   }
   .content h2 {

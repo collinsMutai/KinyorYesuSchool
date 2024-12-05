@@ -299,87 +299,328 @@
           </div>
         </div>
       </div>
-      <div class="row mt-5 documents">
-        <div class="col-12">
-          <h2>Required Documents</h2>
-          <div class="row">
-            <div class="col-3 d-none d-md-block"></div>
+      <div class="row mt-5 documents-form-container">
+        <div class="col-lg-5 documents">
+          <p>Required Documents</p>
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" /></svg
+              >A copy of the child’s birth certificate
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" /></svg
+              >Latest school report from the child’s current school
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" /></svg
+              >Leaving certificate/letter
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-check"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" /></svg
+              >Child passport photo
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-7 form">
+          <p>
+            To express your interest, please fill out the Pupil Registration
+            Form provided below.
+          </p>
+          <form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <label for="childFirstName">Child's First Name</label>
+                <input
+                  id="childFirstName"
+                  formControlName="childFirstName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter child's first name"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('childFirstName')?.invalid &&
+                    applyForm.get('childFirstName')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Child's first name is required.
+                </div>
+              </div>
 
-            <div class="col-12 col-md-6">
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-check"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l5 5l10 -10" /></svg
-                  >A copy of the child’s birth certificate
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-check"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l5 5l10 -10" /></svg
-                  >Latest school report from the child’s current school
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-check"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l5 5l10 -10" /></svg
-                  >Leaving certificate/letter
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-check"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M5 12l5 5l10 -10" />
-                  </svg>Child passport photo
-                </li>
-              </ul>
+              <div class="col-md-6 form-group">
+                <label for="childLastName">Child's Last Name</label>
+                <input
+                  id="childLastName"
+                  formControlName="childLastName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter child's last name"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('childLastName')?.invalid &&
+                    applyForm.get('childLastName')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Child's last name is required.
+                </div>
+              </div>
             </div>
 
-            <div class="col-3 d-none d-md-block"></div>
-          </div>
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <label for="nationality">Nationality</label>
+                <input
+                  id="nationality"
+                  formControlName="nationality"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter nationality"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('nationality')?.invalid &&
+                    applyForm.get('nationality')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Nationality is required.
+                </div>
+              </div>
+              <div class="col-6 form-group">
+                <label for="currentSchool">Current School</label>
+                <input
+                  id="currentSchool"
+                  formControlName="currentSchool"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter current school"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('currentSchool')?.invalid &&
+                    applyForm.get('currentSchool')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Current school is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              
+              <div class="col-md-6 form-group">
+                <label>Gender</label>
+                <div class="d-flex">
+
+               
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="genderMale"
+                    formControlName="gender"
+                    value="male"
+                    class="form-check-input"
+                  />
+                  <label for="genderMale" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="genderFemale"
+                    formControlName="gender"
+                    value="female"
+                    class="form-check-input"
+                  />
+                  <label for="genderFemale" class="form-check-label"
+                    >Female</label
+                  >
+                </div>
+                 </div>
+                <div
+                  *ngIf="
+                    applyForm.get('gender')?.invalid &&
+                    applyForm.get('gender')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Gender is required.
+                </div>
+              </div>
+
+              <!-- Date of Birth -->
+              <div class="col-md-6 form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input
+                  id="dateOfBirth"
+                  formControlName="dateOfBirth"
+                  type="date"
+                  class="form-control"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('dateOfBirth')?.invalid &&
+                    applyForm.get('dateOfBirth')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Date of birth is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Row for Email, Phone, Current School and Message -->
+            <div class="form-row">
+              <!-- Email -->
+              <div class="col-md-6 form-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('email')?.invalid &&
+                    applyForm.get('email')?.touched
+                  "
+                  class="text-danger"
+                >
+                  A valid email is required.
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6 form-group">
+                <label for="phone">Phone</label>
+                <input
+                  id="phone"
+                  formControlName="phone"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter phone number"
+                />
+                <div
+                  *ngIf="
+                    applyForm.get('phone')?.invalid &&
+                    applyForm.get('phone')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Phone number is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Row for Current School and Message -->
+            <div class="form-row">
+              <!-- Current School -->
+
+              <!-- Message -->
+              <div class="col-12 form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  formControlName="message"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Enter your message"
+                ></textarea>
+                <div
+                  *ngIf="
+                    applyForm.get('message')?.invalid &&
+                    applyForm.get('message')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Message is required.
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="apply-btn"
+              [disabled]="applyForm.invalid"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-send"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 14l11 -11" />
+                <path
+                  d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"
+                />
+              </svg>
+              Apply
+            </button>
+          </form>
         </div>
       </div>
     </div>

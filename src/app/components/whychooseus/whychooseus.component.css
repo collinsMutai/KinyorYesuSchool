@@ -124,7 +124,7 @@
   color: #72a02f;
   margin-bottom: 15px !important;
 }
-.documents {
+.documents-form-container {
   padding: 40px 0px;
 }
 
@@ -145,6 +145,67 @@ ul li svg {
   width: 30px;
   max-width: 100%;
 }
+.apply-form {
+  padding: 20px;
+}
+
+.apply-form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.documents p, .form p{
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.text-danger {
+  font-size: 12px;
+  color: red;
+}
+
+.apply-btn {
+  background-color: #72a02f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 150px;
+}
+
+.apply-btn:hover {
+  background-color: #0c1116;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+   width: 100%;
+}
 
 @media (max-width: 768px) {
   .main-container {
@@ -158,17 +219,15 @@ ul li svg {
     margin-bottom: 5px;
     padding: 4px;
   }
-.curriculum-container {
- 
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+  .curriculum-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
   .main-container .row .card svg {
     height: 30px;
     width: 30px;
     padding: 5px;
-    
   }
 
   .left-side,
@@ -177,8 +236,8 @@ ul li svg {
     padding-left: 0;
   }
 
-  .documents {
-    padding: 10px;
+  .documents-form-container {
+    padding: 20px;
   }
 
   ul li svg {
