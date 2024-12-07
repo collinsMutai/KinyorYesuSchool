@@ -154,6 +154,13 @@ li span{
   height: 40px;
 }
 
+.header{
+    padding-top: 60px !important;
+}
+
+.text{
+    padding-top: 40px !important;
+}
 
 /* Tablet Media Query */
 @media (max-width: 768px) {
@@ -203,6 +210,13 @@ li span{
   padding-bottom: 20px;
 }
 
+.header{
+    padding-top: 30px !important;
+}
+
+.text{
+    padding-top: 30px !important;
+}
 
   h2 {
     font-size: 26px; /* Reduce font size */
