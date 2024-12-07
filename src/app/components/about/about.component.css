@@ -1,0 +1,239 @@
+/* Container Styling */
+.about-container {
+  padding: 100px;
+}
+
+.row-container {
+  padding-bottom: 30px;
+}
+
+/* Image Styling */
+.about-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  border-bottom: 6px solid #72a02f;
+  display: block;
+  transition: transform 0.5s ease-in-out, filter 0.3s ease;
+}
+
+/* Styling for the h2 and h3 headers */
+h2 {
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 1.1;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 0.5s; /* Animation for fade-in and slide-up */
+}
+
+h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #72a02f;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 1s; /* Animation for fade-in and slide-up */
+}
+
+/* About text container */
+.about {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  transition: bottom 0.5s ease; /* Smooth transition for text */
+}
+
+/* Title and subtitle styles */
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Container for the image */
+.image-container {
+  position: relative;
+  overflow: hidden; /* Prevents the text from spilling out of the image */
+}
+
+/* Hover effect for the image */
+.image-container:hover img {
+  transform: translateY(-20px) scale(1.05); /* Moves the image up and scales it */
+  filter: brightness(1.1); /* Increases brightness on hover */
+}
+
+/* Move the text upwards along with the image */
+.image-container:hover .about {
+  bottom: 20px; /* Moves text up along with the image */
+}
+
+/* Keyframe animation for fade-in and slide-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start below the element */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Animation for the paragraph text */
+.animated-text {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Adjust delay for each paragraph */
+.animated-text:nth-child(1) {
+  animation-delay: 1s; /* Delay for the first paragraph */
+}
+
+.animated-text:nth-child(2) {
+  animation-delay: 1.2s; /* Delay for the second paragraph */
+}
+
+.animated-text:nth-child(3) {
+  animation-delay: 1.4s; /* Delay for the third paragraph */
+}
+
+/* Animation for the image */
+.animated-image {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 0.3s; /* Image fade-in and slide-up animation */
+}
+
+/* Adjust delay for image */
+.image-container img {
+  animation-delay: 0.5s; /* Image will appear after the headings */
+}
+
+li{
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+li span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+
+.carousel-image {
+  height: 400px; /* Set your desired height */
+  width: 120% !important;
+  object-fit: contain; /* Ensures the image covers the area without stretching */
+  margin-left: -10%;
+}
+
+/* Ensure controls are visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Set the background color for the icons */
+  border-radius: 50%; /* Round the icon background */
+}
+
+/* Optionally, increase the size of the control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* Tablet Media Query */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 60px 20px; /* Adjust padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 32px; /* Reduce heading size */
+  }
+
+  h3 {
+    font-size: 16px; /* Adjust subtitle font size */
+  }
+
+  .title {
+    font-size: 16px; /* Adjust title font size */
+  }
+
+  .subtitle {
+    font-size: 12px; /* Adjust subtitle font size */
+  }
+
+  .about {
+    font-size: 14px; /* Reduce font size in the about section */
+    padding: 8px; /* Adjust padding */
+  }
+
+  /* Image hover effect adjustments */
+  .image-container:hover img {
+    transform: translateY(-15px) scale(1.05); /* Less translation on smaller screens */
+  }
+
+  .image-container:hover .about {
+    bottom: 15px; /* Move text up less */
+  }
+}
+
+/* Mobile Media Query */
+@media (max-width: 480px) {
+
+  .about-container {
+    padding: 20px; /* Adjust padding for very small screens */
+  }
+
+  h2 {
+    font-size: 26px; /* Reduce font size */
+  }
+
+  h3 {
+    font-size: 14px; /* Reduce subtitle font size */
+  }
+
+  .title {
+    font-size: 14px; /* Adjust title font size */
+  }
+
+  .subtitle {
+    font-size: 10px; /* Adjust subtitle font size */
+  }
+
+  .about {
+    font-size: 12px; /* Reduce font size in the about section */
+    padding: 6px; /* Adjust padding */
+  }
+
+  /* Image hover effect adjustments */
+  .image-container:hover img {
+    transform: translateY(-10px) scale(1.05); /* Even less translation on mobile */
+  }
+
+  .image-container:hover .about {
+    bottom: 10px; /* Move text up less */
+  }
+
+  .about-text {
+    padding-top: 20px;
+  }
+
+  .carousel-inner{
+    padding-top: 20px;
+  }
+}

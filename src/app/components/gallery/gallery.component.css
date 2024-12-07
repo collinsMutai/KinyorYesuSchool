@@ -1,0 +1,37 @@
+/* Styling for the container that holds the gallery */
+.gallery-container {
+  padding: 80px 100px;
+}
+
+/* Gallery item styling */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Ensure the content inside behaves like a flex container */
+  flex-direction: column; /* Ensure items stack vertically */
+  height: 300px;  /* Fixed height to make all cards equal */
+  background-color: #f5f5f5; /* Optional: background color */
+}
+
+/* Ensure the image fills the container */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the container without distortion */
+  transition: transform 0.3s ease;
+  display: block; /* Ensures image behaves as a block */
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+/* Optional: Style for the empty state message */
+.empty-message {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem;
+  color: #888;
+}

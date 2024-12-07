@@ -1,1 +1,18 @@
-<p>gallery works!</p>
+<div class="container-fluid gallery-container" *ngIf="images.length > 0">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+    
+    <div class="col" *ngFor="let image of images">
+      <div class="gallery-item">
+        <img [src]="image.src" [alt]="image.alt" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyGallery>
+  <div class="empty-message">
+    <p>No images available to display.</p>
+  </div>
+</ng-template>
+
+
