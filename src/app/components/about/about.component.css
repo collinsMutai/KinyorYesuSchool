@@ -199,6 +199,11 @@ li span{
     padding: 20px; /* Adjust padding for very small screens */
   }
 
+  .row-container {
+  padding-bottom: 20px;
+}
+
+
   h2 {
     font-size: 26px; /* Reduce font size */
   }
