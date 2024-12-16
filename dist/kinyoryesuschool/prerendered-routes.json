@@ -2,7 +2,6 @@
   "routes": [
     "/",
     "/about-us",
-    "/apply-for-admission",
     "/contact-us",
     "/gallery"
   ]
